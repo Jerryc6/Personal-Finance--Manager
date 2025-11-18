@@ -6,36 +6,42 @@ public class code{
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Personal Finance Manager");
 	
-		System.out.println("[+] Add Transaction");
+		System.out.println("[+] Track income & Expenses");
 		String transac = sc.nextLine();
 
 
 		while(true){
 
 		     if(transac.equals("+")){
-			System.out.println("Enter amount :");
-			int amount = sc.nextInt();
 
-			String cat1 = "[1] Dining ";
-			String cat2 = "[2] Expense";
-			System.out.println("Select Category: " + cat1 + cat2);
-			int choice = sc.nextInt();
+			String categories1 = "income";
+			String categories2 = "expenses";
 
-			switch(choice){
-				case 1:
-					System.out.println("Dining");
-				case 2:
-					System.out.println("Expense");
+			System.out.println("Type: income or expenses");
+			String categ = sc.nextLine();
 
+
+			if(categories1.equals("income")){
+				System.out.println("Enter Date: ");
+				String date = sc.nextLine();
+
+				System.out.println("Enter Description: ");
+				String description = sc.nextLine();
+
+				System.out.println("Enter Amount: ");
+				int amount = sc.nextInt();
+			
+			}else if(categories2.equals("expenses")){
+				System.out.println("Enter Date: ");
+				String date1 = sc.nextLine();
+
+				System.out.println("Enter Description: ");
+				String description1 = sc.nextLine();
+
+				System.out.println("Enter Amount: ");
+				int amount1 = sc.nextInt();
 			}
 
-			System.out.println("Enter date: ");
-			String date = sc.nextLine();
-
-			System.out.println("Description :");
-			String disc = sc.nextLine();
-
-			break;
 
 		     }else{
 			System.out.println("Please press [+]");
